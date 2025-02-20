@@ -1,11 +1,12 @@
 # SummarizeX
 
-A simple web-based application for summarizing text using the Hugging Face Transformers library. Users can either upload a CSV file or enter text directly on the webpage to get the summarized text. The summarized text is displayed on the same webpage, and users can also download the summarized texts if a file is uploaded.
+SummarizeX is a web-based application for summarizing text using the Hugging Face Transformers library. Users can either upload a CSV file or enter text directly on the webpage to get the summarized text. The summarized text is displayed on the same webpage, and users can also download the summarized texts if a file is uploaded.
 
 ## Features
 
 - Upload a CSV file or enter text directly on the webpage
 - Summarize text using Hugging Face's pre-trained models
+- Choose from multiple summarization models (BART, T5, Pegasus)
 - Display summarized text on the same webpage
 - Download summarized texts as a CSV file
 
@@ -22,8 +23,8 @@ A simple web-based application for summarizing text using the Hugging Face Trans
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/text-summarizer.git
-   cd text-summarizer
+   git clone https://github.com/yourusername/SummarizeX.git
+   cd SummarizeX
    ```
 
 2. Install the required libraries:
@@ -47,11 +48,13 @@ A simple web-based application for summarizing text using the Hugging Face Trans
    - **CSV File**: The CSV file should have a column named `text` containing the text to be summarized.
    - **Text Area**: Enter the text you want to summarize directly into the textarea.
 
-3. Click the "Summarize" button.
+3. Choose the summarization model from the dropdown menu.
 
-4. The summarized text will be displayed on the same webpage within a container.
+4. Click the "Summarize" button.
 
-5. If you uploaded a CSV file, you can download the summarized texts as a CSV file by clicking the provided link.
+5. The summarized text will be displayed on the same webpage within a container.
+
+6. If you uploaded a CSV file, you can download the summarized texts as a CSV file by clicking the provided link.
 
 ## Example CSV File
 
@@ -84,3 +87,5 @@ Contributions are welcome! Please feel free to submit a pull request or open an 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ```
+
+![image](https://github.com/user-attachments/assets/b767cdff-8916-44a6-8262-0c288a052f53)
