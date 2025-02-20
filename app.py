@@ -9,9 +9,12 @@ app = Flask(__name__)
 def index():
     summary = ""
     if request.method == 'POST':
-        model_name = request.form['model']
-        summarizer = pipeline('summarization', model=model_name)
-        
+        try:
+            model_name = request.form['model']
+            summarizer = pipeline('summarization', model=model_name)
+        except KeyError:
+            return "Model not selected. Please choose a model and try again."
+
         if 'file' in request.files and request.files['file'].filename != '':
             file = request.files['file']
             df = pd.read_csv(file)
