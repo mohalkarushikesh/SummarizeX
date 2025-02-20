@@ -59,10 +59,7 @@ SummarizeX is a web-based application for summarizing text using the Hugging Fac
 ## Example CSV File
 
 ```csv
-id,text
-1,The quick brown fox jumps over the lazy dog.
-2,Artificial intelligence is transforming the world.
-3,Natural Language Processing is a fascinating field.
+   you're text_data.csv data
 ```
 
 ## Example Input Text
