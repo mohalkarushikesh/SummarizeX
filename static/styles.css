@@ -6,14 +6,37 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    justify-content: flex-start;
+    min-height: 100vh; /* Ensure the body takes full height */
+}
+
+.navbar {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 0; /* Remove top margin */
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    flex-grow: 1; /* Allow main-container to take remaining space */
 }
 
 h1 {
     font-size: 2.5em;
     color: #333;
-    margin-top: 0.5em;
+    margin-top: 0.1em;
 }
 
 form {
@@ -22,9 +45,12 @@ form {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2em;
-    margin-bottom: 2em;
     width: 100%;
-    max-width: 600px;
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
 }
 
 label {
@@ -35,20 +61,20 @@ label {
     text-align: left;
 }
 
-textarea, input[type="file"], input[type="submit"] {
+select, textarea, input[type="file"], input[type="submit"] {
     font-size: 1em;
     padding: 0.5em;
-    margin-bottom: 1em;
     width: 100%;
     border: 1px solid #ddd;
     border-radius: 4px;
+    margin-bottom: 0.5em;
 }
 
 textarea {
-    height: 100px;
+    height: 280px;
 }
 
-input[type="submit"] {
+input[type="submit"].submit-button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -56,7 +82,7 @@ input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
+input[type="submit"].submit-button:hover {
     background-color: #0056b3;
 }
 
@@ -78,9 +104,11 @@ a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2em;
     width: 100%;
-    max-width: 600px;
-    margin-top: 2em;
+    max-width: 800px;
+    margin-top: 0;
     text-align: left;
+    max-height: 500px; /* Increase the max-height to accommodate more text */
+    overflow-y: auto; /* Add vertical scroll if the content exceeds the max height */
 }
 
 .container h2 {
@@ -96,7 +124,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-    form, .container {
+    .navbar, .main-container, form, .container {
         padding: 1em;
         margin: 1em;
     }
