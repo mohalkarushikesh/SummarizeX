@@ -1,6 +1,6 @@
 # SummarizeX
 
-SummarizeX is a web-based application for summarizing text using the Hugging Face Transformers library. Users can either upload a CSV file or enter text directly on the webpage to get the summarized text. The summarized text is displayed on the same webpage, and users can also download the summarized texts if a file is uploaded.
+SummarizeX is a web-based application for text summarization using the Hugging Face Transformers library. Users can either upload a CSV file or enter text directly on the webpage to get the summarized text. The summarized text is displayed on the same webpage, and users can also download the summarized texts if a file is uploaded.
 
 ## Features
 
@@ -59,7 +59,7 @@ SummarizeX is a web-based application for summarizing text using the Hugging Fac
 ## Example CSV File
 
 ```csv
-   you're text_data.csv data
+    you're  text_data.csv data
 ```
 
 ## Example Input Text
